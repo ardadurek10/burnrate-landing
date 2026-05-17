@@ -273,7 +273,7 @@
       <h3 id="tos-h2">License</h3>
       <p id="tos-p2">Your purchase grants you a personal, non-transferable license to use BurnRate OS. You may not share your license key or allow others to use your account.</p>
       <h3 id="tos-h3">Subscriptions</h3>
-      <p id="tos-p3">BurnRate OS is offered on a monthly subscription basis (Starter $9/mo, Pro $19/mo, Elite $39/mo). Subscriptions are managed through Whop. You can cancel at any time through your Whop account.</p>
+      <p id="tos-p3">BurnRate OS is offered on a monthly subscription basis (Starter $9/mo, Pro $19/mo, Elite $39/mo). Subscriptions are managed through Stripe. You can cancel at any time from the dashboard settings.</p>
       <h3 id="tos-h4">Disclaimer</h3>
       <p id="tos-p4">BurnRate OS is a financial tracking tool, not a licensed financial advisor. The AI advisor provides suggestions based on your data but does not constitute professional financial advice. Always consult a qualified financial professional for major financial decisions.</p>
       <h3 id="tos-h5">Contact</h3>
@@ -296,7 +296,7 @@
       <h3 id="rp-h2">After 7 Days</h3>
       <p id="rp-p2">After the initial 7-day period, refunds are evaluated on a case-by-case basis. We are committed to resolving any issues you encounter.</p>
       <h3 id="rp-h3">Cancellation</h3>
-      <p id="rp-p3">You can cancel your subscription at any time through your Whop account. Cancellation stops future charges but does not automatically trigger a refund for the current period.</p>
+      <p id="rp-p3">You can cancel your subscription at any time from the dashboard settings. Cancellation stops future charges but does not automatically trigger a refund for the current period.</p>
       <h3 id="rp-h4">How to Request a Refund</h3>
       <ul id="rp-ul1">
         <li>Email hello@burnrate-os.com with your purchase email</li>
@@ -540,10 +540,10 @@
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f6">Early access to new modules</span></li>
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f7">Elite license key + branded email</span></li>
         </ul>
-        <a href="https://buy.stripe.com/cNi5kE7zfrgbur4eF3ZK04" class="plan-cta ghost t" data-key="e_cta">Get Elite →</a>
+        <a href="https://buy.stripe.com/cNi5kE7zHfrgbur4eF3ZK04" class="plan-cta ghost t" data-key="e_cta">Get Elite →</a>
       </div>
     </div>
-    <p class="t" style="text-align:center;margin-top:40px;font-size:13px;color:var(--text3)" data-key="price_note">All plans include automatic license key delivery via email · Powered by Whop · Cancel anytime</p>
+    <p class="t" style="text-align:center;margin-top:40px;font-size:13px;color:var(--text3)" data-key="price_note">All plans include automatic license key delivery via email · Powered by Stripe · Cancel anytime</p>
   </div>
 </section>
 
@@ -564,7 +564,7 @@
     <div class="section-label reveal t" style="justify-content:center" data-key="faq_label">FAQ</div>
     <h2 class="section-title reveal t" data-key="faq_h">Questions answered.</h2>
   </div>
-  <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq1_q">How does the license key system work?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq1_a">After payment on Whop, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.</div></div>
+  <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq1_q">How does the license key system work?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq1_a">After payment via Stripe, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.</div></div>
   <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq2_q">Can I upgrade or downgrade my plan?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq2_a">Yes, anytime. Upgrade from Starter to Pro or Elite directly from the dashboard. Your data is preserved and new features unlock immediately.</div></div>
   <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq3_q">Is my financial data secure?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq3_a">Your data is stored in Supabase (PostgreSQL). BurnRate OS never connects to your bank — you manually log expenses and income, so no sensitive banking credentials are ever shared.</div></div>
   <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq4_q">What AI model powers the advisor?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq4_a">Claude (Anthropic) is our primary AI, with Gemini as fallback. The AI sees your actual spending data, income, and subscriptions to give genuinely personalized advice — not generic tips.</div></div>
@@ -610,7 +610,7 @@
       <ul class="footer-links">
         <li><a href="#faq">FAQ</a></li>
         <li><a href="mailto:hello@burnrate-os.com">hello@burnrate-os.com</a></li>
-        <li><a href="https://whop.com/burnrate-os" class="t" data-key="footer_community">Whop Community</a></li>
+        <li><a href="mailto:hello@burnrate-os.com" class="t" data-key="footer_community">Topluluk</a></li>
       </ul>
     </div>
   </div>
@@ -668,14 +668,14 @@ const TRANSLATIONS = {
     e_f1:'Everything in Pro',e_f2:'Live Investment Tracker',e_f3:'Monthly Summary + Score (A/B/C/D)',
     e_f4:'Yahoo Finance real-time data',e_f5:'Priority email support',
     e_f6:'Early access to new modules',e_f7:'Elite license key + branded email',e_cta:'Get Elite →',
-    price_note:'All plans include automatic license key delivery via email · Powered by Whop · Cancel anytime',
+    price_note:'All plans include automatic license key delivery via email · Powered by Stripe · Cancel anytime',
     test_label:'Testimonials',test_h:'What users are saying',
     t1:'"Finally a finance tool that doesn\'t feel like accounting homework. The AI advisor actually knows my spending patterns."',
     t2:'"The subscription audit literally saved me $140/month on stuff I forgot I was paying for. The DEAD label hits different."',
     t3:'"As a student, the Starter plan is exactly what I needed. Clean, fast, and the 30-day challenge keeps me disciplined."',
     t1_role:'Freelance Designer',t2_role:'SaaS Founder',t3_role:'CS Student',
     faq_label:'FAQ',faq_h:'Questions answered.',
-    faq1_q:'How does the license key system work?',faq1_a:'After payment on Whop, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.',
+    faq1_q:'How does the license key system work?',faq1_a:'After payment via Stripe, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.',
     faq2_q:'Can I upgrade or downgrade my plan?',faq2_a:'Yes, anytime. Upgrade from Starter to Pro or Elite directly from the dashboard. Your data is preserved and new features unlock immediately.',
     faq3_q:'Is my financial data secure?',faq3_a:'Your data is stored in Supabase (PostgreSQL). BurnRate OS never connects to your bank — you manually log expenses and income, so no sensitive banking credentials are ever shared.',
     faq4_q:'What AI model powers the advisor?',faq4_a:'Claude (Anthropic) is our primary AI, with Gemini as fallback. The AI sees your actual spending data, income, and subscriptions to give genuinely personalized advice.',
@@ -686,7 +686,7 @@ const TRANSLATIONS = {
     footer_desc:'Financial command center for freelancers, students, and digital entrepreneurs. Built with precision.',
     footer_product:'Product',footer_legal:'Legal',footer_support:'Support',
     footer_dashboard:'Dashboard',footer_privacy:'Privacy Policy',footer_terms:'Terms of Service',
-    footer_refund:'Refund Policy',footer_community:'Whop Community',footer_rights:'All rights reserved.',
+    footer_refund:'Refund Policy',footer_community:'Community',footer_rights:'All rights reserved.',
     // modal titles
     modal_privacy:'Privacy Policy',modal_terms:'Terms of Service',modal_refund:'Refund Policy',
   },
@@ -730,25 +730,25 @@ const TRANSLATIONS = {
     e_f1:"Pro'daki her şey",e_f2:'Canlı Yatırım Takibi',e_f3:'Aylık Özet + Puan (A/B/C/D)',
     e_f4:'Yahoo Finance gerçek zamanlı veriler',e_f5:'Öncelikli e-posta desteği',
     e_f6:'Yeni modüllere erken erişim',e_f7:'Elite lisans anahtarı + markalı e-posta',e_cta:"Elite'i Al →",
-    price_note:'Tüm planlar otomatik lisans anahtarı e-posta teslimatı içerir · Whop tarafından desteklenir · İstediğiniz zaman iptal',
+    price_note:'Tüm planlar otomatik lisans anahtarı e-posta teslimatı içerir · Stripe tarafından desteklenir · İstediğiniz zaman iptal',
     test_label:'Kullanıcı Yorumları',test_h:'Kullanıcılar ne diyor',
     t1:'"Sonunda muhasebe ödevi gibi hissettirmeyen bir finans aracı. Yapay zeka danışmanı harcama alışkanlıklarımı gerçekten biliyor."',
     t2:'"Abonelik denetimi, ödediğimi unuttuğum şeyler için ayda 140 dolar tasarruf etmemi sağladı."',
     t3:'"Öğrenci olarak Starter plan tam ihtiyacım olandı. Temiz, hızlı ve 30 günlük meydan okuma beni disiplinli tutuyor."',
     t1_role:'Serbest Tasarımcı',t2_role:'SaaS Girişimcisi',t3_role:'Bilgisayar Bilimleri Öğrencisi',
     faq_label:'Sık Sorulan Sorular',faq_h:'Sorularınızın cevabı.',
-    faq1_q:'Lisans anahtarı sistemi nasıl çalışır?',faq1_a:"Stripe'ta ödeme sonrasında webhook'umuz otomatik olarak hesabınızı oluşturur, plana özel lisans anahtarı üretir ve birkaç saniye içinde e-postanıza gönderir.",
+    faq1_q:'Lisans anahtarı sistemi nasıl çalışır?',faq1_a:"Stripe ile ödeme sonrasında webhook'umuz otomatik olarak hesabınızı oluşturur, plana özel lisans anahtarı üretir ve birkaç saniye içinde e-postanıza gönderir.",
     faq2_q:'Planımı yükseltebilir veya düşürebilir miyim?',faq2_a:"Evet, istediğiniz zaman. Dashboard'dan anında yükseltin. Verileriniz korunur ve yeni özellikler hemen açılır.",
     faq3_q:'Finansal verilerim güvende mi?',faq3_a:"Verileriniz Supabase'de saklanır. BurnRate OS banka hesabınıza hiçbir zaman bağlanmaz.",
     faq4_q:'Danışmanı hangi yapay zeka modeli güçlendiriyor?',faq4_a:'Claude (Anthropic) birincil yapay zekamızdır, Gemini yedek olarak kullanılır. Yapay zeka gerçek verilerinizi görerek kişiselleştirilmiş tavsiyeler verir.',
-    faq5_q:'Para iade garantisi var mı?',faq5_a:'Evet — tüm planlarda 7 günlük para iade garantisi. 7 gün içinde memnun kalmazsanız dashboard üzerinden tek tıkla iade talep edebilirsiniz.',
+    faq5_q:'Para iade garantisi var mı?',faq5_a:'Evet — tüm planlarda 7 günlük para iade garantisi. 7 gün içinde memnun kalmazsanız hello@burnrate-os.com adresine yazın.',
     cta_label:'Başlayın',cta_h:'Paranız bir<br><span class="hero-title-accent">işletim sistemi</span> hak ediyor.',
     cta_sub:"Sonunda finansları üzerinde netlik kazanan yüzlerce freelancer, öğrenci ve girişimciye katılın.",
     cta_btn:'Planınızı seçin',cta_note:'Otomatik aktivasyon · Kurulum gerekmez · İstediğiniz zaman iptal',
     footer_desc:"Freelancer'lar, öğrenciler ve dijital girişimciler için finansal komuta merkezi.",
     footer_product:'Ürün',footer_legal:'Yasal',footer_support:'Destek',
     footer_dashboard:'Panel',footer_privacy:'Gizlilik Politikası',footer_terms:'Kullanım Koşulları',
-    footer_refund:'İade Politikası',footer_community:'Whop Topluluğu',footer_rights:'Tüm hakları saklıdır.',
+    footer_refund:'İade Politikası',footer_community:'Topluluk',footer_rights:'Tüm hakları saklıdır.',
     modal_privacy:'Gizlilik Politikası',modal_terms:'Kullanım Koşulları',modal_refund:'İade Politikası',
   }
 };
