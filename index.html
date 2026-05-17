@@ -853,19 +853,7 @@ document.querySelectorAll('.reveal,.preview-frame,.pricing-card,.module-card').f
 
 // ── PRICING TOGGLE ──────────────────────────────────────────────
 const prices={monthly:{starter:9,pro:19,elite:39},yearly:{starter:7,pro:15,elite:31}};
-const stripeLinks = {
-  monthly: {
-    starter: 'https://buy.stripe.com/bJe6oI4nv0wmgOL9yZ3ZK02',
-    pro: 'https://buy.stripe.com/cNi28s4nv3Iy6a75iJ3ZK03',
-    elite: 'https://buy.stripe.com/cNi5kE7zHfrgbur4eF3ZK04'
-  },
-  yearly: {
-    starter: 'https://buy.stripe.com/bJe6oI4nv0wmgOL9yZ3ZK02',
-    pro: 'https://buy.stripe.com/cNi28s4nv3Iy6a75iJ3ZK03',
-    elite: 'https://buy.stripe.com/cNi5kE7zHfrgbur4eF3ZK04'
-  }
-};
-
+const stripeLinks={monthly:{starter:'https://buy.stripe.com/bJe6oI4nv0wmgOL9yZ3ZK02',pro:'https://buy.stripe.com/cNi28s4nv3Iy6a75iJ3ZK03',elite:'https://buy.stripe.com/cNi5kE7zHfrgbur4eF3ZK04'},yearly:{starter:'https://buy.stripe.com/8x29AUaLT0wm8if12t3ZK05',pro:'https://buy.stripe.com/6oU5kE2fn5QG9mj9yZ3ZK06',elite:'https://buy.stripe.com/7sYeVe4nv6UK7ebeTj3ZK07'}};
 function setPricing(mode){
   document.getElementById('toggle-monthly').classList.toggle('active',mode==='monthly');
   document.getElementById('toggle-yearly').classList.toggle('active',mode==='yearly');
@@ -874,8 +862,7 @@ function setPricing(mode){
     const el=document.getElementById('price-'+plan);
     el.style.transform='translateY(-10px)';el.style.opacity='0';
     setTimeout(()=>{el.textContent=p[plan];el.style.transition='all 0.3s';el.style.transform='translateY(0)';el.style.opacity='1';},150);
-    // Update button links
-    const btn=document.querySelector(`[data-key="${plan[0]}_cta"]`);
+    const btn=document.querySelector('[data-key="'+plan[0]+'_cta"]');
     if(btn) btn.href=stripeLinks[mode][plan];
   });
 }
