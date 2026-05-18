@@ -273,7 +273,7 @@
       <h3 id="tos-h2">License</h3>
       <p id="tos-p2">Your purchase grants you a personal, non-transferable license to use BurnRate OS. You may not share your license key or allow others to use your account.</p>
       <h3 id="tos-h3">Subscriptions</h3>
-      <p id="tos-p3">BurnRate OS is offered on a monthly subscription basis (Starter $9/mo, Pro $19/mo, Elite $39/mo). Subscriptions are managed through Stripe. You can cancel at any time from the dashboard settings.</p>
+      <p id="tos-p3">BurnRate OS is offered on a monthly subscription basis (Starter $9/mo, Pro $19/mo, Elite $39/mo). Subscriptions are managed through Whop. You can cancel at any time through your Whop account.</p>
       <h3 id="tos-h4">Disclaimer</h3>
       <p id="tos-p4">BurnRate OS is a financial tracking tool, not a licensed financial advisor. The AI advisor provides suggestions based on your data but does not constitute professional financial advice. Always consult a qualified financial professional for major financial decisions.</p>
       <h3 id="tos-h5">Contact</h3>
@@ -296,7 +296,7 @@
       <h3 id="rp-h2">After 7 Days</h3>
       <p id="rp-p2">After the initial 7-day period, refunds are evaluated on a case-by-case basis. We are committed to resolving any issues you encounter.</p>
       <h3 id="rp-h3">Cancellation</h3>
-      <p id="rp-p3">You can cancel your subscription at any time from the dashboard settings. Cancellation stops future charges but does not automatically trigger a refund for the current period.</p>
+      <p id="rp-p3">You can cancel your subscription at any time through your Whop account. Cancellation stops future charges but does not automatically trigger a refund for the current period.</p>
       <h3 id="rp-h4">How to Request a Refund</h3>
       <ul id="rp-ul1">
         <li>Email hello@burnrate-os.com with your purchase email</li>
@@ -322,14 +322,14 @@
       <button class="lang-btn" id="lang-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn active" id="lang-tr" onclick="setLang('tr')">TR</button>
     </div>
-    <a href="https://app.burnrate-os.com/login" class="btn-ghost t" data-key="nav_signin">Sign in</a>
+    <a href="https://burnrate-os-app.vercel.app/login" class="btn-ghost t" data-key="nav_signin">Sign in</a>
     <a href="#pricing" class="btn-primary t" data-key="nav_start">Get started →</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge"><div class="hero-badge-dot"></div><span class="t" data-key="badge">Financial Command Center · v2.0</span></div>
+  <div class="hero-badge"><div class="hero-badge-dot"></div><span class="t" data-key="badge">Financial Command Center · v2.1</span></div>
   <h1 class="hero-title"><span class="t" data-key="hero_title">Stop guessing<br>where your <span class="hero-title-accent">money goes</span></span></h1>
   <p class="hero-sub t" data-key="hero_sub">BurnRate OS gives freelancers, students and digital entrepreneurs one command center for every dollar — budgets, investments, AI insights, and goals.</p>
   <div class="hero-actions">
@@ -337,7 +337,7 @@
     <a href="#modules" class="btn-hero-outline t" data-key="hero_modules">See all modules</a>
   </div>
   <div style="margin-top:16px;animation:fadeUp 0.8s 0.4s ease both">
-    <a href="https://app.burnrate-os.com/dashboard" id="win-install-btn"
+    <a href="https://burnrate-os-app.vercel.app/dashboard" id="win-install-btn"
       style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;transition:all 0.2s;font-family:'DM Sans',sans-serif;"
       onmouseover="this.style.background='rgba(255,255,255,0.08)';this.style.color='rgba(255,255,255,0.8)'"
       onmouseout="this.style.background='rgba(255,255,255,0.04)';this.style.color='rgba(255,255,255,0.5)'">
@@ -346,7 +346,7 @@
     </a>
   </div>
   <div class="hero-stats">
-    <div class="hero-stat"><span class="hero-stat-num">8</span><span class="hero-stat-label t" data-key="stat1">Power Modules</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">9</span><span class="hero-stat-label t" data-key="stat1">Power Modules</span></div>
     <div class="hero-stat"><span class="hero-stat-num">$0</span><span class="hero-stat-label t" data-key="stat2">Hidden fees</span></div>
     <div class="hero-stat"><span class="hero-stat-num">AI</span><span class="hero-stat-label t" data-key="stat3">Powered Advisor</span></div>
     <div class="hero-stat"><span class="hero-stat-num">30s</span><span class="hero-stat-label t" data-key="stat4">Live data refresh</span></div>
@@ -363,6 +363,8 @@
   <div class="ticker-item">30-Day Challenge <span>✓ ACTIVE</span></div>
   <div class="ticker-item">AI Financial Advisor <span>✓ ACTIVE</span></div>
   <div class="ticker-item">Monthly Summary Score <span>✓ ACTIVE</span></div>
+  <div class="ticker-item">Debt Tracker <span>✓ NEW</span></div>
+  <div class="ticker-item">Monthly Goals <span>✓ NEW</span></div>
   <div class="ticker-item">Monthly Overview <span>✓ ACTIVE</span></div>
   <div class="ticker-item">Subscription Tracker <span>✓ ACTIVE</span></div>
   <div class="ticker-item">Spending Analytics <span>✓ ACTIVE</span></div>
@@ -392,6 +394,7 @@
           <div class="mini-nav-item"><div class="mini-nav-dot" style="background:#f59e0b"></div>Spending</div>
           <div class="mini-nav-item"><div class="mini-nav-dot" style="background:#10b981"></div>Investments</div>
           <div class="mini-nav-item"><div class="mini-nav-dot" style="background:#06b6d4"></div>Balance</div>
+          <div class="mini-nav-item"><div class="mini-nav-dot" style="background:#f43f5e"></div>Debt Tracker</div>
           <div class="mini-nav-item"><div class="mini-nav-dot" style="background:#f43f5e"></div>Goals</div>
           <div class="mini-nav-item"><div class="mini-nav-dot" style="background:#8b5cf6"></div>AI Advisor</div>
           <div class="mini-nav-item"><div class="mini-nav-dot" style="background:#7c3aed"></div>Summary</div>
@@ -454,29 +457,30 @@
       <div class="feature-desc t" data-key="f3_desc">Auto-label every subscription as KEEP, WARN, or DEAD. Cancel what's costing you invisibly.</div>
       <div class="feature-tag" style="background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2)">PRO+</div>
     </div>
-    <div class="feature-card" style="--card-glow:rgba(245,158,11,0.1)">
-      <div class="feature-icon" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.2)">🎯</div>
-      <div class="feature-name t" data-key="f4_name">30-Day Challenge</div>
-      <div class="feature-desc t" data-key="f4_desc">AI-generated daily financial tasks. Build habits. Track streaks on a visual calendar grid.</div>
-      <div class="feature-tag" style="background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2)">PRO+</div>
+    <div class="feature-card" style="--card-glow:rgba(244,63,94,0.1)">
+      <div class="feature-icon" style="background:rgba(244,63,94,0.1);border-color:rgba(244,63,94,0.2)">🤝</div>
+      <div class="feature-name t" data-key="f4_name">Debt Tracker</div>
+      <div class="feature-desc t" data-key="f4_desc">Track receivables and payables. Partial payments, contact info, due dates. Net status at a glance.</div>
+      <div class="feature-tag" style="background:rgba(244,63,94,0.1);color:#f43f5e;border:1px solid rgba(244,63,94,0.2)">PRO+ · NEW</div>
     </div>
   </div>
 </section>
 
 <!-- MODULES -->
 <section class="modules" id="modules">
-  <div class="section-label reveal t" data-key="mod_label">8 Modules</div>
+  <div class="section-label reveal t" data-key="mod_label">9 Modules</div>
   <h2 class="section-title reveal t" data-key="mod_h">Everything you need,<br>nothing you don't.</h2>
   <p class="section-sub reveal t" data-key="mod_sub">Each module is a precision tool. Together they form your complete financial OS.</p>
   <div class="modules-grid">
-    <div class="module-card" style="--mc:#7c3aed22"><div class="module-icon-wrap" style="background:rgba(124,58,237,0.1)">📊</div><div class="module-info"><div class="module-title" style="color:#a78bfa">Overview Dashboard</div><div class="module-desc t" data-key="m1_desc">Stat cards, pie charts, bar charts. Your financial health at a glance.</div><div class="module-plan" style="background:rgba(124,58,237,0.1);color:#a78bfa;border:1px solid rgba(124,58,237,0.2)">STARTER</div></div></div>
-    <div class="module-card" style="--mc:#ef444422"><div class="module-icon-wrap" style="background:rgba(239,68,68,0.1)">🔄</div><div class="module-info"><div class="module-title" style="color:#ef4444">Subscription Tracker</div><div class="module-desc t" data-key="m2_desc">Add/remove subscriptions. Auto-tag as KEEP / WARN / DEAD. Pie chart of recurring costs.</div><div class="module-plan" style="background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2)">PRO</div></div></div>
-    <div class="module-card" style="--mc:#f59e0b22"><div class="module-icon-wrap" style="background:rgba(245,158,11,0.1)">💸</div><div class="module-info"><div class="module-title" style="color:#f59e0b">Spending Analytics</div><div class="module-desc t" data-key="m3_desc">Log expenses, filter by category, area charts, category breakdown bars.</div><div class="module-plan" style="background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2)">STARTER</div></div></div>
-    <div class="module-card" style="--mc:#10b98122"><div class="module-icon-wrap" style="background:rgba(16,185,129,0.1)">📈</div><div class="module-info"><div class="module-title" style="color:#10b981">Investments</div><div class="module-desc t" data-key="m4_desc">Yahoo Finance live prices. Search any ticker. 30-second auto-refresh. Multi-currency support.</div><div class="module-plan" style="background:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2)">ELITE</div></div></div>
-    <div class="module-card" style="--mc:#06b6d422"><div class="module-icon-wrap" style="background:rgba(6,182,212,0.1)">💰</div><div class="module-info"><div class="module-title" style="color:#06b6d4">Balance & Income</div><div class="module-desc t" data-key="m5_desc">Income log, savings rate ring chart, bar chart breakdowns. Track exactly what you keep.</div><div class="module-plan" style="background:rgba(6,182,212,0.1);color:#06b6d4;border:1px solid rgba(6,182,212,0.2)">STARTER</div></div></div>
-    <div class="module-card" style="--mc:#f43f5e22"><div class="module-icon-wrap" style="background:rgba(244,63,94,0.1)">🎯</div><div class="module-info"><div class="module-title" style="color:#f43f5e">30-Day Challenge</div><div class="module-desc t" data-key="m6_desc">AI daily task generation. 10×3 calendar grid. Streak tracking. Financial discipline builder.</div><div class="module-plan" style="background:rgba(244,63,94,0.1);color:#f43f5e;border:1px solid rgba(244,63,94,0.2)">PRO</div></div></div>
-    <div class="module-card" style="--mc:#8b5cf622"><div class="module-icon-wrap" style="background:rgba(139,92,246,0.1)">🤖</div><div class="module-info"><div class="module-title" style="color:#8b5cf6">AI Advisor</div><div class="module-desc t" data-key="m7_desc">Claude API with your real data. Suggestion buttons. Personalized financial coaching.</div><div class="module-plan" style="background:rgba(139,92,246,0.1);color:#8b5cf6;border:1px solid rgba(139,92,246,0.2)">PRO</div></div></div>
-    <div class="module-card" style="--mc:#7c3aed22"><div class="module-icon-wrap" style="background:rgba(124,58,237,0.1)">🏆</div><div class="module-info"><div class="module-title" style="color:#7c3aed">Monthly Summary</div><div class="module-desc t" data-key="m8_desc">A/B/C/D score. Money flow chart. Subscription audit. Your financial report card.</div><div class="module-plan" style="background:rgba(124,58,237,0.1);color:#a78bfa;border:1px solid rgba(124,58,237,0.2)">ELITE</div></div></div>
+    <div class="module-card" style="--mc:#7c3aed22"><div class="module-icon-wrap" style="background:rgba(124,58,237,0.1)">📊</div><div class="module-info"><div class="module-title t" style="color:#a78bfa" data-key="mt1">Overview Dashboard</div><div class="module-desc t" data-key="m1_desc">Stat cards, pie charts, bar charts. Your financial health at a glance.</div><div class="module-plan" style="background:rgba(124,58,237,0.1);color:#a78bfa;border:1px solid rgba(124,58,237,0.2)">STARTER</div></div></div>
+    <div class="module-card" style="--mc:#ef444422"><div class="module-icon-wrap" style="background:rgba(239,68,68,0.1)">🔄</div><div class="module-info"><div class="module-title t" style="color:#ef4444" data-key="mt2">Subscription Tracker</div><div class="module-desc t" data-key="m2_desc">Add/remove subscriptions. Auto-tag as KEEP / WARN / DEAD. Pie chart of recurring costs.</div><div class="module-plan" style="background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2)">PRO</div></div></div>
+    <div class="module-card" style="--mc:#f59e0b22"><div class="module-icon-wrap" style="background:rgba(245,158,11,0.1)">💸</div><div class="module-info"><div class="module-title t" style="color:#f59e0b" data-key="mt3">Spending Analytics</div><div class="module-desc t" data-key="m3_desc">Log expenses, filter by category, area charts, category breakdown bars.</div><div class="module-plan" style="background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2)">STARTER</div></div></div>
+    <div class="module-card" style="--mc:#10b98122"><div class="module-icon-wrap" style="background:rgba(16,185,129,0.1)">📈</div><div class="module-info"><div class="module-title t" style="color:#10b981" data-key="mt4">Investments</div><div class="module-desc t" data-key="m4_desc">Yahoo Finance live prices. Search any ticker. 30-second auto-refresh. Multi-currency support.</div><div class="module-plan" style="background:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2)">ELITE</div></div></div>
+    <div class="module-card" style="--mc:#06b6d422"><div class="module-icon-wrap" style="background:rgba(6,182,212,0.1)">💰</div><div class="module-info"><div class="module-title t" style="color:#06b6d4" data-key="mt5">Balance & Income</div><div class="module-desc t" data-key="m5_desc">Income log, savings rate ring chart, bar chart breakdowns. Track exactly what you keep.</div><div class="module-plan" style="background:rgba(6,182,212,0.1);color:#06b6d4;border:1px solid rgba(6,182,212,0.2)">STARTER</div></div></div>
+    <div class="module-card" style="--mc:#f43f5e22"><div class="module-icon-wrap" style="background:rgba(244,63,94,0.1)">🎯</div><div class="module-info"><div class="module-title t" style="color:#f43f5e" data-key="mt6">30-Day Challenge</div><div class="module-desc t" data-key="m6_desc">AI daily task generation. 10×3 calendar grid. Streak tracking. Financial discipline builder.</div><div class="module-plan" style="background:rgba(244,63,94,0.1);color:#f43f5e;border:1px solid rgba(244,63,94,0.2)">PRO</div></div></div>
+    <div class="module-card" style="--mc:#8b5cf622"><div class="module-icon-wrap" style="background:rgba(139,92,246,0.1)">🤖</div><div class="module-info"><div class="module-title t" style="color:#8b5cf6" data-key="mt7">AI Advisor</div><div class="module-desc t" data-key="m7_desc">Claude API with your real data. Suggestion buttons. Personalized financial coaching.</div><div class="module-plan" style="background:rgba(139,92,246,0.1);color:#8b5cf6;border:1px solid rgba(139,92,246,0.2)">PRO</div></div></div>
+    <div class="module-card" style="--mc:#7c3aed22"><div class="module-icon-wrap" style="background:rgba(124,58,237,0.1)">🏆</div><div class="module-info"><div class="module-title t" style="color:#7c3aed" data-key="mt8">Monthly Summary</div><div class="module-desc t" data-key="m8_desc">A/B/C/D score. Money flow chart. Subscription audit. Your financial report card.</div><div class="module-plan" style="background:rgba(124,58,237,0.1);color:#a78bfa;border:1px solid rgba(124,58,237,0.2)">ELITE</div></div></div>
+    <div class="module-card" style="--mc:#f43f5e22"><div class="module-icon-wrap" style="background:rgba(244,63,94,0.1)">🤝</div><div class="module-info"><div class="module-title t" style="color:#f43f5e" data-key="mt9">Debt Tracker</div><div class="module-desc t" data-key="m9_desc">Track receivables and payables. Add contact info, due dates, categories. Partial payment tracking.</div><div class="module-plan" style="background:rgba(244,63,94,0.1);color:#f43f5e;border:1px solid rgba(244,63,94,0.2)">PRO · NEW</div></div></div>
   </div>
 </section>
 
@@ -507,7 +511,7 @@
           <li class="plan-feature-item"><span class="check off">–</span><span class="t" data-key="s_f6">AI Financial Advisor</span></li>
           <li class="plan-feature-item"><span class="check off">–</span><span class="t" data-key="s_f7">Investments Module</span></li>
         </ul>
-        <a href="https://app.burnrate-os.com/login?mode=trial" class="plan-cta ghost t" data-key="s_cta">Try Free for 7 Days →</a>
+        <a href="https://whop.com/checkout/plan_fPw7wIxGVEc7g" class="plan-cta ghost t" data-key="s_cta">Get Starter →</a>
       </div>
       <div class="pricing-card featured" id="card-pro">
         <div class="pricing-badge t" data-key="popular">⭐ Most Popular</div>
@@ -521,10 +525,12 @@
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="p_f3">30-Day Challenge</span></li>
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="p_f4">AI Financial Advisor (Claude)</span></li>
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="p_f5">Plan-specific license key + email</span></li>
-          <li class="plan-feature-item"><span class="check off">–</span><span class="t" data-key="p_f6">Live Investments</span></li>
-          <li class="plan-feature-item"><span class="check off">–</span><span class="t" data-key="p_f7">Monthly Summary Score</span></li>
+          <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="p_f6">Debt Tracker</span></li>
+          <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="p_f7">Monthly Goal System</span></li>
+          <li class="plan-feature-item"><span class="check off">–</span><span class="t" data-key="p_f8">Live Investments</span></li>
+          <li class="plan-feature-item"><span class="check off">–</span><span class="t" data-key="p_f9">Monthly Summary Score</span></li>
         </ul>
-        <a href="https://app.burnrate-os.com/login?mode=trial" class="plan-cta solid t" data-key="p_cta">Try Free for 7 Days →</a>
+        <a href="https://whop.com/checkout/plan_69Su8P5fb8BKc" class="plan-cta solid t" data-key="p_cta">Get Pro →</a>
       </div>
       <div class="pricing-card" id="card-elite">
         <div class="plan-name">Elite</div>
@@ -536,14 +542,13 @@
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f2">Live Investment Tracker</span></li>
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f3">Monthly Summary + Score (A/B/C/D)</span></li>
           <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f4">Yahoo Finance real-time data</span></li>
-          <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f5">Priority email support</span></li>
-          <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f6">Early access to new modules</span></li>
-          <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f7">Elite license key + branded email</span></li>
+          <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f5">Priority email support + Early access</span></li>
+          <li class="plan-feature-item"><span class="check on">✓</span><span class="t" data-key="e_f6">Elite license key + branded email</span></li>
         </ul>
-        <a href="https://app.burnrate-os.com/login?mode=trial" class="plan-cta ghost t" data-key="e_cta">Try Free for 7 Days →</a>
+        <a href="https://whop.com/checkout/plan_SFjoNXODXAH6j" class="plan-cta ghost t" data-key="e_cta">Get Elite →</a>
       </div>
     </div>
-    <p class="t" style="text-align:center;margin-top:40px;font-size:13px;color:var(--text3)" data-key="price_note">All plans include automatic license key delivery via email · Powered by Stripe · Cancel anytime</p>
+    <p class="t" style="text-align:center;margin-top:40px;font-size:13px;color:var(--text3)" data-key="price_note">All plans include automatic license key delivery via email · Powered by Whop · Cancel anytime</p>
   </div>
 </section>
 
@@ -564,7 +569,7 @@
     <div class="section-label reveal t" style="justify-content:center" data-key="faq_label">FAQ</div>
     <h2 class="section-title reveal t" data-key="faq_h">Questions answered.</h2>
   </div>
-  <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq1_q">How does the license key system work?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq1_a">After payment via Stripe, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.</div></div>
+  <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq1_q">How does the license key system work?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq1_a">After payment on Whop, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.</div></div>
   <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq2_q">Can I upgrade or downgrade my plan?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq2_a">Yes, anytime. Upgrade from Starter to Pro or Elite directly from the dashboard. Your data is preserved and new features unlock immediately.</div></div>
   <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq3_q">Is my financial data secure?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq3_a">Your data is stored in Supabase (PostgreSQL). BurnRate OS never connects to your bank — you manually log expenses and income, so no sensitive banking credentials are ever shared.</div></div>
   <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)"><span class="t" data-key="faq4_q">What AI model powers the advisor?</span><span class="faq-icon">+</span></button><div class="faq-answer t" data-key="faq4_a">Claude (Anthropic) is our primary AI, with Gemini as fallback. The AI sees your actual spending data, income, and subscriptions to give genuinely personalized advice — not generic tips.</div></div>
@@ -594,7 +599,7 @@
         <li><a href="#features" class="t" data-key="nav_features">Features</a></li>
         <li><a href="#modules" class="t" data-key="nav_modules">Modules</a></li>
         <li><a href="#pricing" class="t" data-key="nav_pricing">Pricing</a></li>
-        <li><a href="https://app.burnrate-os.com/dashboard" class="t" data-key="footer_dashboard">Dashboard</a></li>
+        <li><a href="https://burnrate-os-app.vercel.app/dashboard" class="t" data-key="footer_dashboard">Dashboard</a></li>
       </ul>
     </div>
     <div>
@@ -610,7 +615,7 @@
       <ul class="footer-links">
         <li><a href="#faq">FAQ</a></li>
         <li><a href="mailto:hello@burnrate-os.com">hello@burnrate-os.com</a></li>
-        <li><a href="mailto:hello@burnrate-os.com" class="t" data-key="footer_community">Topluluk</a></li>
+        <li><a href="https://whop.com/burnrate-os" class="t" data-key="footer_community">Whop Community</a></li>
       </ul>
     </div>
   </div>
@@ -631,7 +636,7 @@ const TRANSLATIONS = {
   en: {
     nav_features:'Features',nav_modules:'Modules',nav_pricing:'Pricing',nav_faq:'FAQ',
     nav_signin:'Sign in',nav_start:'Get started →',
-    badge:'Financial Command Center · v2.0',
+    badge:'Financial Command Center · v2.1',
     hero_title:'Stop guessing<br>where your <span class="hero-title-accent">money goes</span>',
     hero_sub:'BurnRate OS gives freelancers, students and digital entrepreneurs one command center for every dollar — budgets, investments, AI insights, and goals.',
     hero_cta:'Start free trial',hero_modules:'See all modules',win_download:'Download for Windows',
@@ -641,8 +646,11 @@ const TRANSLATIONS = {
     f1_name:'AI Financial Advisor',f1_desc:"Claude-powered analysis of your real spending data. Not generic tips — personalized insights.",
     f2_name:'Live Investments',f2_desc:'Yahoo Finance integration. Track your portfolio with 30-second auto-refresh and real price data.',
     f3_name:'Smart Subscription Audit',f3_desc:"Auto-label every subscription as KEEP, WARN, or DEAD. Cancel what's costing you invisibly.",
-    f4_name:'30-Day Challenge',f4_desc:'AI-generated daily financial tasks. Build habits. Track streaks on a visual calendar grid.',
-    mod_label:'8 Modules',mod_h:"Everything you need,<br>nothing you don't.",
+    f4_name:'Debt Tracker',f4_desc:'Track receivables and payables. Partial payments, contact info, due dates. Net status at a glance.',
+        mt1:'Overview Dashboard',mt2:'Subscription Tracker',mt3:'Spending Analytics',
+    mt4:'Investments',mt5:'Balance & Income',mt6:'30-Day Challenge',
+    mt7:'AI Advisor',mt8:'Monthly Summary',mt9:'Debt Tracker',
+    mod_label:'9 Modules',mod_h:"Everything you need,<br>nothing you don't.",
     mod_sub:'Each module is a precision tool. Together they form your complete financial OS.',
     m1_desc:'Stat cards, pie charts, bar charts. Your financial health at a glance.',
     m2_desc:'Add/remove subscriptions. Auto-tag as KEEP / WARN / DEAD. Pie chart of recurring costs.',
@@ -652,30 +660,31 @@ const TRANSLATIONS = {
     m6_desc:'AI daily task generation. 10×3 calendar grid. Streak tracking. Financial discipline builder.',
     m7_desc:'Claude API with your real data. Suggestion buttons. Personalized financial coaching.',
     m8_desc:'A/B/C/D score. Money flow chart. Subscription audit. Your financial report card.',
+    m9_desc:'Track receivables and payables. Add contact info, due dates, categories. Partial payment tracking.',
     price_label:'Pricing',price_h:'Simple, transparent pricing.',
     price_sub:'Cancel anytime. No hidden fees. Upgrade or downgrade whenever.',
     toggle_monthly:'Monthly',toggle_yearly:'Yearly',per_month:'/ month',
     s_desc:'Perfect for students and those just starting their financial journey.',
     s_f1:'Overview Dashboard',s_f2:'Spending Analytics',s_f3:'Balance & Income Tracker',
     s_f4:'Automatic welcome email + license key',s_f5:'Subscription Tracker',
-    s_f6:'AI Financial Advisor',s_f7:'Investments Module',s_cta:'Try Free for 7 Days →',
+    s_f6:'AI Financial Advisor',s_f7:'Investments Module',s_cta:'Get Starter →',
     popular:'⭐ Most Popular',
     p_desc:'For freelancers and solo entrepreneurs who want full financial clarity.',
     p_f1:'Everything in Starter',p_f2:'Subscription Tracker + Auto-labels',p_f3:'30-Day Challenge',
     p_f4:'AI Financial Advisor (Claude)',p_f5:'Plan-specific license key + email',
-    p_f6:'Live Investments',p_f7:'Monthly Summary Score',p_cta:'Try Free for 7 Days →',
+    p_f6:'Debt Tracker',p_f7:'Monthly Goal System',p_f8:'Live Investments',p_f9:'Monthly Summary Score',p_cta:'Try Free for 7 Days →',
     e_desc:'For digital nomads and power users who want the full OS experience.',
     e_f1:'Everything in Pro',e_f2:'Live Investment Tracker',e_f3:'Monthly Summary + Score (A/B/C/D)',
     e_f4:'Yahoo Finance real-time data',e_f5:'Priority email support',
-    e_f6:'Early access to new modules',e_f7:'Elite license key + branded email',e_cta:'Try Free for 7 Days →',
-    price_note:'All plans include automatic license key delivery via email · Powered by Stripe · Cancel anytime',
+    e_f6:'Early access to new modules',e_f7:'Elite license key + branded email',e_cta:'Get Elite →',
+    price_note:'All plans include automatic license key delivery via email · Powered by Whop · Cancel anytime',
     test_label:'Testimonials',test_h:'What users are saying',
     t1:'"Finally a finance tool that doesn\'t feel like accounting homework. The AI advisor actually knows my spending patterns."',
     t2:'"The subscription audit literally saved me $140/month on stuff I forgot I was paying for. The DEAD label hits different."',
     t3:'"As a student, the Starter plan is exactly what I needed. Clean, fast, and the 30-day challenge keeps me disciplined."',
     t1_role:'Freelance Designer',t2_role:'SaaS Founder',t3_role:'CS Student',
     faq_label:'FAQ',faq_h:'Questions answered.',
-    faq1_q:'How does the license key system work?',faq1_a:'After payment via Stripe, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.',
+    faq1_q:'How does the license key system work?',faq1_a:'After payment on Whop, our webhook automatically creates your account, generates a plan-specific license key (BRNOS-PRO-XXXX format), and sends it to your email within seconds. You use this key + your email to log into the dashboard.',
     faq2_q:'Can I upgrade or downgrade my plan?',faq2_a:'Yes, anytime. Upgrade from Starter to Pro or Elite directly from the dashboard. Your data is preserved and new features unlock immediately.',
     faq3_q:'Is my financial data secure?',faq3_a:'Your data is stored in Supabase (PostgreSQL). BurnRate OS never connects to your bank — you manually log expenses and income, so no sensitive banking credentials are ever shared.',
     faq4_q:'What AI model powers the advisor?',faq4_a:'Claude (Anthropic) is our primary AI, with Gemini as fallback. The AI sees your actual spending data, income, and subscriptions to give genuinely personalized advice.',
@@ -686,25 +695,28 @@ const TRANSLATIONS = {
     footer_desc:'Financial command center for freelancers, students, and digital entrepreneurs. Built with precision.',
     footer_product:'Product',footer_legal:'Legal',footer_support:'Support',
     footer_dashboard:'Dashboard',footer_privacy:'Privacy Policy',footer_terms:'Terms of Service',
-    footer_refund:'Refund Policy',footer_community:'Community',footer_rights:'All rights reserved.',
+    footer_refund:'Refund Policy',footer_community:'Whop Community',footer_rights:'All rights reserved.',
     // modal titles
     modal_privacy:'Privacy Policy',modal_terms:'Terms of Service',modal_refund:'Refund Policy',
   },
   tr: {
     nav_features:'Özellikler',nav_modules:'Modüller',nav_pricing:'Fiyatlar',nav_faq:'SSS',
     nav_signin:'Giriş Yap',nav_start:'Başla →',
-    badge:'Finansal Komuta Merkezi · v2.0',
+    badge:'Finansal Komuta Merkezi · v2.1',
     hero_title:'Paranızın nereye<br><span class="hero-title-accent">gittiğini bilin</span>',
     hero_sub:"BurnRate OS; freelancer'lara, öğrencilere ve dijital girişimcilere her kuruş için tek bir komuta merkezi sunar — bütçe, yatırım, yapay zeka analizi ve hedefler.",
-    hero_cta:'Ücretsiz Dene',hero_modules:'Tüm modüller',win_download:'Windows\u2019a İndir',
+    hero_cta:'Ücretsiz Dene',hero_modules:'Tüm modüller',win_download:'Windows İndir',
     stat1:'Güçlü Modül',stat2:'Gizli Ücret',stat3:'Destekli Danışman',stat4:'Canlı Veri',
     why_title:'Neden BurnRate OS',why_h:'Farklı tasarlandı,<br>amaca özel.',
     why_sub:'Bir elektronik tablo değil. Bir banka uygulaması değil. Kişisel finanslarınız için gerçek zamanlı bir işletim sistemi.',
     f1_name:'Yapay Zeka Danışmanı',f1_desc:'Gerçek harcama verilerinizin Claude destekli analizi. Genel tavsiyeler değil — kişiselleştirilmiş içgörüler.',
-    f2_name:'Canlı Yatırımlar',f2_desc:"Yahoo Finance entegrasyonu. Portföyünüzü 30 saniyelik otomatik yenileme ve gerçek fiyat verileriyle takip edin.",
+    f2_name:'Canlı Yatırımlar',f2_desc:'Yahoo Finance entegrasyonu. Portföyünüzü 30 saniyelik otomatik yenileme ve gerçek fiyat verileriyle takip edin.',
     f3_name:'Akıllı Abonelik Denetimi',f3_desc:'Her aboneliği otomatik olarak KEEP, WARN veya DEAD olarak etiketleyin.',
-    f4_name:'30 Günlük Meydan Okuma',f4_desc:'Yapay zeka tarafından üretilen günlük finansal görevler. Alışkanlıklar oluşturun.',
-    mod_label:'8 Modül',mod_h:'İhtiyacınız olan her şey,<br>fazlası değil.',
+    f4_name:'Borç Takibi',f4_desc:'Alacak ve verecekleri takip edin. Kısmi ödeme, iletişim bilgileri, vade tarihleri. Net duruma tek bakışta ulaşın.',
+        mt1:'Genel Bakış Paneli',mt2:'Abonelik Takibi',mt3:'Harcama Analizi',
+    mt4:'Yatırımlar',mt5:'Bakiye ve Gelir',mt6:'30 Günlük Meydan Okuma',
+    mt7:'Yapay Zeka Danışmanı',mt8:'Aylık Özet',mt9:'Borç Takibi',
+    mod_label:'9 Modül',mod_h:'İhtiyacınız olan her şey,<br>fazlası değil.',
     mod_sub:'Her modül bir hassasiyet aracıdır. Birlikte tam finansal işletim sisteminizi oluştururlar.',
     m1_desc:'İstatistik kartları, pasta grafikler. Finansal sağlığınıza tek bakışta.',
     m2_desc:'Abonelik ekle/kaldır. KEEP / WARN / DEAD olarak otomatik etiketle.',
@@ -714,30 +726,32 @@ const TRANSLATIONS = {
     m6_desc:'Yapay zeka günlük görev üretimi. 10×3 takvim ızgarası. Finansal disiplin.',
     m7_desc:'Gerçek verinizle Claude API. Öneri butonları. Kişiselleştirilmiş finansal koçluk.',
     m8_desc:'A/B/C/D puanı. Para akışı grafiği. Abonelik denetimi. Finansal karneniz.',
+    m9_desc:'Alacak ve verecekleri takip edin. İletişim bilgileri, vadeler, kategoriler. Kısmi ödeme takibi.',
+    m9_desc:'Alacak ve verecekleri takip edin. İletişim bilgileri, vadeler, kategoriler. Kısmi ödeme takibi.',
     price_label:'Fiyatlandırma',price_h:'Sade ve şeffaf fiyatlandırma.',
     price_sub:'İstediğiniz zaman iptal edin. Gizli ücret yok.',
     toggle_monthly:'Aylık',toggle_yearly:'Yıllık',per_month:'/ ay',
     s_desc:'Öğrenciler ve finansal yolculuğuna yeni başlayanlar için ideal.',
     s_f1:'Genel Bakış Paneli',s_f2:'Harcama Analizi',s_f3:'Bakiye ve Gelir Takibi',
     s_f4:'Otomatik hoşgeldin e-postası + lisans anahtarı',s_f5:'Abonelik Takibi',
-    s_f6:'Yapay Zeka Danışmanı',s_f7:'Yatırım Modülü',s_cta:'7 Gün Ücretsiz Dene →',
+    s_f6:'Yapay Zeka Danışmanı',s_f7:'Yatırım Modülü',s_cta:"Starter'ı Al →",
     popular:'⭐ En Popüler',
     p_desc:"Tam finansal netlik isteyen freelancer'lar ve solo girişimciler için.",
     p_f1:"Starter'daki her şey",p_f2:'Abonelik Takibi + Otomatik Etiketler',p_f3:'30 Günlük Meydan Okuma',
     p_f4:'Yapay Zeka Danışmanı (Claude)',p_f5:'Plana özel lisans anahtarı + e-posta',
-    p_f6:'Canlı Yatırımlar',p_f7:'Aylık Özet Puanı',p_cta:'7 Gün Ücretsiz Dene →',
+    p_f6:'Canlı Yatırımlar',p_f7:'Aylık Özet Puanı',p_cta:"Pro'yu Al →",
     e_desc:'Tam OS deneyimi isteyen dijital göçebeler ve güçlü kullanıcılar için.',
     e_f1:"Pro'daki her şey",e_f2:'Canlı Yatırım Takibi',e_f3:'Aylık Özet + Puan (A/B/C/D)',
     e_f4:'Yahoo Finance gerçek zamanlı veriler',e_f5:'Öncelikli e-posta desteği',
-    e_f6:'Yeni modüllere erken erişim',e_f7:'Elite lisans anahtarı + markalı e-posta',e_cta:'7 Gün Ücretsiz Dene →',
-    price_note:'Tüm planlar otomatik lisans anahtarı e-posta teslimatı içerir · Stripe tarafından desteklenir · İstediğiniz zaman iptal',
+    e_f6:'Yeni modüllere erken erişim',e_f7:'Elite lisans anahtarı + markalı e-posta',e_cta:"Elite'i Al →",
+    price_note:'Tüm planlar otomatik lisans anahtarı e-posta teslimatı içerir · Whop tarafından desteklenir · İstediğiniz zaman iptal',
     test_label:'Kullanıcı Yorumları',test_h:'Kullanıcılar ne diyor',
     t1:'"Sonunda muhasebe ödevi gibi hissettirmeyen bir finans aracı. Yapay zeka danışmanı harcama alışkanlıklarımı gerçekten biliyor."',
     t2:'"Abonelik denetimi, ödediğimi unuttuğum şeyler için ayda 140 dolar tasarruf etmemi sağladı."',
     t3:'"Öğrenci olarak Starter plan tam ihtiyacım olandı. Temiz, hızlı ve 30 günlük meydan okuma beni disiplinli tutuyor."',
     t1_role:'Serbest Tasarımcı',t2_role:'SaaS Girişimcisi',t3_role:'Bilgisayar Bilimleri Öğrencisi',
     faq_label:'Sık Sorulan Sorular',faq_h:'Sorularınızın cevabı.',
-    faq1_q:'Lisans anahtarı sistemi nasıl çalışır?',faq1_a:"Stripe ile ödeme sonrasında webhook'umuz otomatik olarak hesabınızı oluşturur, plana özel lisans anahtarı üretir ve birkaç saniye içinde e-postanıza gönderir.",
+    faq1_q:'Lisans anahtarı sistemi nasıl çalışır?',faq1_a:"Whop'ta ödeme sonrasında webhook'umuz otomatik olarak hesabınızı oluşturur, plana özel lisans anahtarı üretir ve birkaç saniye içinde e-postanıza gönderir.",
     faq2_q:'Planımı yükseltebilir veya düşürebilir miyim?',faq2_a:"Evet, istediğiniz zaman. Dashboard'dan anında yükseltin. Verileriniz korunur ve yeni özellikler hemen açılır.",
     faq3_q:'Finansal verilerim güvende mi?',faq3_a:"Verileriniz Supabase'de saklanır. BurnRate OS banka hesabınıza hiçbir zaman bağlanmaz.",
     faq4_q:'Danışmanı hangi yapay zeka modeli güçlendiriyor?',faq4_a:'Claude (Anthropic) birincil yapay zekamızdır, Gemini yedek olarak kullanılır. Yapay zeka gerçek verilerinizi görerek kişiselleştirilmiş tavsiyeler verir.',
@@ -748,7 +762,7 @@ const TRANSLATIONS = {
     footer_desc:"Freelancer'lar, öğrenciler ve dijital girişimciler için finansal komuta merkezi.",
     footer_product:'Ürün',footer_legal:'Yasal',footer_support:'Destek',
     footer_dashboard:'Panel',footer_privacy:'Gizlilik Politikası',footer_terms:'Kullanım Koşulları',
-    footer_refund:'İade Politikası',footer_community:'Topluluk',footer_rights:'Tüm hakları saklıdır.',
+    footer_refund:'İade Politikası',footer_community:'Whop Topluluğu',footer_rights:'Tüm hakları saklıdır.',
     modal_privacy:'Gizlilik Politikası',modal_terms:'Kullanım Koşulları',modal_refund:'İade Politikası',
   }
 };
@@ -853,7 +867,6 @@ document.querySelectorAll('.reveal,.preview-frame,.pricing-card,.module-card').f
 
 // ── PRICING TOGGLE ──────────────────────────────────────────────
 const prices={monthly:{starter:9,pro:19,elite:39},yearly:{starter:7,pro:15,elite:31}};
-const stripeLinks={monthly:{starter:'https://app.burnrate-os.com/login?mode=trial',pro:'https://app.burnrate-os.com/login?mode=trial',elite:'https://app.burnrate-os.com/login?mode=trial'},yearly:{starter:'https://app.burnrate-os.com/login?mode=trial',pro:'https://app.burnrate-os.com/login?mode=trial',elite:'https://app.burnrate-os.com/login?mode=trial'}};
 function setPricing(mode){
   document.getElementById('toggle-monthly').classList.toggle('active',mode==='monthly');
   document.getElementById('toggle-yearly').classList.toggle('active',mode==='yearly');
@@ -862,8 +875,6 @@ function setPricing(mode){
     const el=document.getElementById('price-'+plan);
     el.style.transform='translateY(-10px)';el.style.opacity='0';
     setTimeout(()=>{el.textContent=p[plan];el.style.transition='all 0.3s';el.style.transform='translateY(0)';el.style.opacity='1';},150);
-    const btn=document.querySelector('[data-key="'+plan[0]+'_cta"]');
-    if(btn) btn.href=stripeLinks[mode][plan];
   });
 }
 
