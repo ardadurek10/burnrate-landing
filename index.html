@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="tr" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BurnRate OS — V2.1 Yakında</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #03030a;
+  --violet: #7c3aed;
+  --violet-light: #a78bfa;
+  --text: #f1f0ff;
+  --text2: #a09ab8;
+  --text3: #3d3a52;
+  --border: rgba(124,58,237,0.2);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Grid */
+.grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(124,58,237,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top glow */
+.glow-top {
+  position: fixed;
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(124,58,237,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Edge lines */
+.edge-top {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124,58,237,0.6), rgba(167,139,250,0.8), rgba(124,58,237,0.6), transparent);
+  z-index: 2;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 24px;
+  max-width: 640px;
+  width: 100%;
+}
+
+/* Status badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(124,58,237,0.08);
+  border: 1px solid rgba(124,58,237,0.3);
+  border-radius: 100px;
+  padding: 8px 20px;
+  margin-bottom: 48px;
+  animation: fadeUp 0.6s ease both;
+}
+.badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 10px #a78bfa;
+  animation: pulse 2s ease-in-out infinite;
+}
+.badge-text {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  color: #7c5cbe;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Logo */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 48px;
+  animation: fadeUp 0.6s 0.05s ease both;
+}
+.logo-box {
+  width: 52px; height: 52px;
+  background: #07070f;
+  border: 1px solid rgba(124,58,237,0.4);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-name {
+  font-family: "Syne", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f1f0ff;
+  letter-spacing: -0.02em;
+}
+
+/* Main heading */
+.heading {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(52px, 12vw, 96px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -4px;
+  background: linear-gradient(160deg, #ffffff 0%, #e8e4ff 20%, #c4b5fd 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.divider {
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124,58,237,0.5), transparent);
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s 0.15s ease both;
+}
+
+.tagline {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.tagline-sub {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  color: var(--text3);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 56px;
+  animation: fadeUp 0.6s 0.25s ease both;
+}
+
+/* Feature pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 64px;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+.pill {
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.pill-purple { color: #a78bfa; border-color: rgba(124,58,237,0.3); background: rgba(124,58,237,0.08); }
+.pill-green  { color: #6ee7b7; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.08); }
+.pill-cyan   { color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.08); }
+.pill-amber  { color: #fde68a; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.08); }
+.pill-red    { color: #fca5a5; border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.08); }
+
+/* YAKINDA */
+.yakinda-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.6s 0.35s ease both;
+}
+.yakinda-line { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, rgba(124,58,237,0.4)); }
+.yakinda-line-r { width: 80px; height: 1px; background: linear-gradient(90deg, rgba(124,58,237,0.4), transparent); }
+.yakinda-text {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  color: var(--violet);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+/* Login link */
+.login-link {
+  color: var(--text3);
+  text-decoration: none;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+.login-link:hover { color: var(--text2); }
+
+/* Corner marks */
+.corner { position: fixed; width: 20px; height: 20px; z-index: 2; }
+.c-tl { top: 20px; left: 20px; border-top: 1px solid rgba(124,58,237,0.3); border-left: 1px solid rgba(124,58,237,0.3); }
+.c-tr { top: 20px; right: 20px; border-top: 1px solid rgba(124,58,237,0.3); border-right: 1px solid rgba(124,58,237,0.3); }
+.c-bl { bottom: 20px; left: 20px; border-bottom: 1px solid rgba(124,58,237,0.3); border-left: 1px solid rgba(124,58,237,0.3); }
+.c-br { bottom: 20px; right: 20px; border-bottom: 1px solid rgba(124,58,237,0.3); border-right: 1px solid rgba(124,58,237,0.3); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px #a78bfa; }
+  50% { opacity: 0.5; box-shadow: 0 0 20px #a78bfa; }
+}
+
+/* Lang toggle */
+.lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 60px;
+  display: flex;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+.lang-btn {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-family: "DM Mono", monospace;
+  color: var(--text3);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+}
+.lang-btn.active { background: var(--violet); color: #fff; }
+
+@media (max-width: 600px) {
+  .heading { letter-spacing: -2px; }
+  .pills { gap: 8px; }
+  .pill { font-size: 12px; padding: 7px 14px; }
+}
+</style>
+</head>
+<body>
+
+<div class="grid"></div>
+<div class="glow-top"></div>
+<div class="edge-top"></div>
+<div class="corner c-tl"></div>
+<div class="corner c-tr"></div>
+<div class="corner c-bl"></div>
+<div class="corner c-br"></div>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" id="lang-tr" onclick="setLang('tr')">TR</button>
+  <button class="lang-btn" id="lang-en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="content">
+  <!-- Badge -->
+  <div class="badge">
+    <div class="badge-dot"></div>
+    <span class="badge-text" id="badge-text">Yeni Sürüm Geliyor</span>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <div class="logo-box">
+      <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="fg" x1="0.2" y1="1" x2="0.2" y2="0">
+            <stop offset="0%" stop-color="#ef4444"/>
+            <stop offset="40%" stop-color="#f59e0b"/>
+            <stop offset="85%" stop-color="#a78bfa"/>
+            <stop offset="100%" stop-color="#c4b5fd"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 88 C32 88 18 76 19 62 C20 52 28 46 27 36 C27 27 22 20 20 12 C32 20 37 31 36 42 C42 30 44 14 39 2 C54 14 58 32 55 48 C61 36 63 18 58 4 C74 20 77 44 71 60 C77 48 79 32 74 18 C88 36 90 60 82 74 C80 62 80 48 76 36 C86 52 85 74 76 84 C68 90 58 88 50 88Z" fill="url(#fg)"/>
+        <path d="M50 80 C36 80 28 70 29 60 C30 52 36 47 35 38 C35 30 32 24 30 17 C40 25 43 35 41 45 C47 35 48 22 44 12 C56 22 58 38 54 52 C59 42 60 28 56 18 C66 32 67 50 62 62 C66 54 67 42 63 34 C70 46 69 62 63 72 C57 80 50 80 50 80Z" fill="#fff" opacity="0.07"/>
+      </svg>
+    </div>
+    <span class="logo-name">BurnRate OS</span>
+  </div>
+
+  <!-- Version -->
+  <div class="heading">V2.1</div>
+  <div class="divider"></div>
+
+  <!-- Tagline -->
+  <p class="tagline" id="tagline">Finansal komuta merkeziniz yeniden tasarlandı.</p>
+  <p class="tagline-sub" id="tagline-sub">Her kuruş için bir işletim sistemi</p>
+
+  <!-- Pills -->
+  <div class="pills">
+    <span class="pill pill-purple" id="p1">Yapay Zeka Danışman</span>
+    <span class="pill pill-green" id="p2">Canlı Yatırımlar</span>
+    <span class="pill pill-cyan" id="p3">Borç Takibi</span>
+    <span class="pill pill-amber" id="p4">Aylık Hedef Sistemi</span>
+    <span class="pill pill-red" id="p5">Abonelik Denetimi</span>
+  </div>
+
+  <!-- Yakında -->
+  <div class="yakinda-row">
+    <div class="yakinda-line"></div>
+    <span class="yakinda-text" id="yakinda">Yakında Sizlerle</span>
+    <div class="yakinda-line-r"></div>
+  </div>
+
+  <!-- Login link -->
+  <a href="https://app.burnrate-os.com/login" class="login-link" id="login-link">Giriş Yap →</a>
+</div>
+
+<script>
+const T = {
+  tr: {
+    badge: "Yeni Sürüm Geliyor",
+    tagline: "Finansal komuta merkeziniz yeniden tasarlandı.",
+    sub: "Her kuruş için bir işletim sistemi",
+    p1: "Yapay Zeka Danışman", p2: "Canlı Yatırımlar", p3: "Borç Takibi",
+    p4: "Aylık Hedef Sistemi", p5: "Abonelik Denetimi",
+    yakinda: "Yakında Sizlerle",
+    login: "Giriş Yap →"
+  },
+  en: {
+    badge: "New Version Coming",
+    tagline: "Your financial command center, redesigned.",
+    sub: "An operating system for every penny",
+    p1: "AI Financial Advisor", p2: "Live Investments", p3: "Debt Tracker",
+    p4: "Monthly Goal System", p5: "Subscription Audit",
+    yakinda: "Coming Soon",
+    login: "Sign In →"
+  }
+};
+
+let lang = localStorage.getItem("burnrate_lang") || "tr";
+
+function setLang(l) {
+  lang = l;
+  localStorage.setItem("burnrate_lang", l);
+  document.getElementById("lang-tr").classList.toggle("active", l === "tr");
+  document.getElementById("lang-en").classList.toggle("active", l === "en");
+  const t = T[l];
+  document.getElementById("badge-text").textContent = t.badge;
+  document.getElementById("tagline").textContent = t.tagline;
+  document.getElementById("tagline-sub").textContent = t.sub;
+  document.getElementById("p1").textContent = t.p1;
+  document.getElementById("p2").textContent = t.p2;
+  document.getElementById("p3").textContent = t.p3;
+  document.getElementById("p4").textContent = t.p4;
+  document.getElementById("p5").textContent = t.p5;
+  document.getElementById("yakinda").textContent = t.yakinda;
+  document.getElementById("login-link").textContent = t.login;
+}
+
+setLang(lang);
+
+// Admin bypass
+let adminCode = "";
+document.addEventListener("keydown", (e) => {
+  adminCode += e.key;
+  if (adminCode.length > 20) adminCode = adminCode.slice(-20);
+  if (adminCode.includes("burnrate2025")) {
+    window.location.href = "/landing.html";
+  }
+});
+</script>
+</body>
+</html>
